@@ -4,7 +4,7 @@ import React from "react";
 const MyComponent = () => {
   return (
     <div>
-      <h2>Hello, this is MyComponent!</h2>
+      <h2>Hello, this is First MyComponent!</h2>
     </div>
   );
 };
