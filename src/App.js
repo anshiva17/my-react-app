@@ -1,25 +1,24 @@
-import logo from "./logo.svg";
+import "./css/style.css";
+
 import "./App.css";
+
 import MyComponent from "./components/MyComponent";
+import Header from "./components/header";
+import Navbar from "./components/navbar"; // Import Navbar component
+import { BrowserRouter as Router } from "react-router-dom"; // Import BrowserRouter
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <h1>Welcome to My React App</h1>
           <MyComponent /> {/* Using MyComponent inside App */}
-          Edit <code>src/App.js</code> and save to reload.
+          <Header /> {/* Using Header inside App */}
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Router>
+        <Navbar /> {/* Using Navbar inside App */}
+      </Router>
     </div>
   );
 }
