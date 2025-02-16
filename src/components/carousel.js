@@ -15,7 +15,7 @@ function Carousel() {
           >
             <img
               className="position-absolute w-100 h-100"
-              src="/img/carousel-1.jpg"
+              src="img/carousel-1.jpg"
               alt="carousel-1"
               style={{ objectFit: "cover" }}
             />
@@ -45,7 +45,7 @@ function Carousel() {
           >
             <img
               className="position-absolute w-100 h-100"
-              src="/img/carousel-2.jpg"
+              src="img/carousel-2.jpg"
               alt="carousel-2"
               style={{ objectFit: "cover" }}
             />
