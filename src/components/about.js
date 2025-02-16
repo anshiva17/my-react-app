@@ -8,7 +8,7 @@ const About = () => {
           <div className="col-lg-5">
             <img
               className="img-fluid mb-4 mb-lg-0"
-              src="/img/about.jpg"
+              src="img/about.jpg"
               alt="About Us"
             />
           </div>
