@@ -2,7 +2,7 @@ import "./css/style.css";
 
 import "./App.css";
 import "./components/Navbar/navbar.css";
-import "./scss/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import MyComponent from "./components/MyComponent";
 import Header from "./components/header";
