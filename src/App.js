@@ -26,9 +26,9 @@ function App() {
           <Header /> {/* Using Header inside App */}
         </p>
       </header>
-      <Router>
+      <Router basename="/my-react-app">
         <Navbar /> {/* Using Navbar inside App */}
-      </Router>
+      
       <Carousel />
       <About />
       <Services />
@@ -39,6 +39,7 @@ function App() {
       <Contact />
       <Footer />
       <SolarEnergyModal />
+    </Router>
     </div>
   );
 }
