@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Gallery1 from '../assets/img/gallery-1.jpg';
 <script src="/lib/owlcarousel/owl.carousel.min.js"></script>;
 
 const Gallery = () => {
@@ -26,7 +27,7 @@ const Gallery = () => {
         <div className="gallery-item">
           <img
             className="img-fluid w-100"
-            src="img/gallery-1.jpg"
+            src={Gallery1}
             alt="Gallery Item 1"
           />
           <a
