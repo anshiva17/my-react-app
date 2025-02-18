@@ -4,7 +4,6 @@ import "./App.css";
 import "./components/Navbar/navbar.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import MyComponent from "./components/MyComponent";
 import Header from "./components/header";
 import Navbar from "./components/Navbar/navbar"; // Import Navbar component
 import Carousel from "./components/carousel"; // Import Carousel component
@@ -24,7 +23,6 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p>
-          <MyComponent /> {/* Using MyComponent inside App */}
           <Header /> {/* Using Header inside App */}
         </p>
       </header>
