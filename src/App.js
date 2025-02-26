@@ -1,6 +1,7 @@
 import "./App.css";
 
 import "./lib/lightbox/css/lightbox.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./css/style.css";
 
