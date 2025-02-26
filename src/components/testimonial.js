@@ -35,27 +35,46 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <Container className="py-5 text-center" id="testimonials">
-      <div className="d-flex justify-content-center mb-4 gap-3">
-        <Button variant="primary" onClick={handlePrev} className="arrow-btn">
-          <FaChevronLeft size={30} />
-        </Button>
-        <Button variant="primary" onClick={handleNext} className="arrow-btn">
-          <FaChevronRight size={30} />
-        </Button>
-      </div>
+    <div className="container-fluid py-5" id="testimonial">
+      <Container className="py-5">
+        <div
+          className="section-title position-relative text-center"
+          style={{ marginBottom: "40px" }}
+        >
+          <h6
+            className="text-uppercase text-primary mb-3"
+            style={{ letterSpacing: "3px" }}
+          >
+            Testimonial
+          </h6>
+          <h1 className="display-4">Our Clients Say</h1>
+        </div>
 
-      <div className="testimonial-content">
-        <img
-          src={testimonials[index].image}
-          alt={testimonials[index].name}
-          className="rounded-circle mb-4"
-          style={{ width: "100px", height: "100px", objectFit: "cover" }}
-        />
-        <p className="lead text-muted">{testimonials[index].text}</p>
-        <h5 className="fw-bold mt-3">{testimonials[index].name}</h5>
-        <p className="text-muted">{testimonials[index].profession}</p>
-      </div>
+        <div className="d-flex justify-content-center mb-5 gap-3">
+          <Button variant="primary" onClick={handlePrev} className="arrow-btn">
+            <FaChevronLeft size={30} />
+          </Button>
+          <Button variant="primary" onClick={handleNext} className="arrow-btn">
+            <FaChevronRight size={30} />
+          </Button>
+        </div>
+
+        <div className="row justify-content-center">
+          <div className="col-lg-8">
+            <div className="text-center">
+              <img
+                src={testimonials[index].image}
+                alt={testimonials[index].name}
+                className="img-fluid mx-auto mb-3 rounded-circle"
+                style={{ width: "100px", height: "100px", objectFit: "cover" }}
+              />
+              <p style={{ fontSize: "22px" }}>{testimonials[index].text}</p>
+              <h4>{testimonials[index].name}</h4>
+              <span>{testimonials[index].profession}</span>
+            </div>
+          </div>
+        </div>
+      </Container>
 
       <style>{`
         .arrow-btn {
@@ -67,7 +86,7 @@ const TestimonialCarousel = () => {
           align-items: center;
         }
       `}</style>
-    </Container>
+    </div>
   );
 };
 

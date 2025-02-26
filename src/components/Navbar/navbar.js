@@ -31,38 +31,40 @@ function Navbar() {
         id="navbarCollapse"
       >
         <div className="navbar-nav ml-auto py-0">
-          <Link to="#home" className="nav-item nav-link active">
+          <a href="#home" className="nav-item nav-link active">
             Home
-          </Link>
-          <Link to="#about" className="nav-item nav-link">
+          </a>
+          <a href="#about" className="nav-item nav-link">
             About
-          </Link>
-          <Link to="#service" className="nav-item nav-link">
+          </a>
+          <a href="#service" className="nav-item nav-link">
             Service
-          </Link>
-          <Link to="#project" className="nav-item nav-link">
+          </a>
+          <a href="#project" className="nav-item nav-link">
             Project
-          </Link>
+          </a>
         </div>
-        <Link
-          to="/"
+
+        <a
+          href="/"
           className="navbar-brand bg-primary px-4 mx-3 d-none d-lg-block"
         >
           <h1 className="display-4 text-white text-uppercase m-0">Solar</h1>
-        </Link>
+        </a>
+
         <div className="navbar-nav mr-auto py-0">
-          <Link to="#team" className="nav-item nav-link">
+          <a href="#team" className="nav-item nav-link">
             Team
-          </Link>
-          <Link to="#faqs" className="nav-item nav-link">
+          </a>
+          <a href="#faqs" className="nav-item nav-link">
             FAQs
-          </Link>
-          <Link to="#testimonial" className="nav-item nav-link">
+          </a>
+          <a href="#testimonial" className="nav-item nav-link">
             Testimonial
-          </Link>
-          <Link to="#contact" className="nav-item nav-link">
+          </a>
+          <a href="#contact" className="nav-item nav-link">
             Contact
-          </Link>
+          </a>
         </div>
       </div>
     </nav>

@@ -1,8 +1,5 @@
 import "./App.css";
 
-import "./components/Navbar/navbar.css";
-import "./components/Navbar/navbar.js";
-
 import "./lib/lightbox/css/lightbox.min.css";
 
 import "./css/style.css";
@@ -38,5 +35,6 @@ function App() {
     </div>
   );
 }
+console.log("App component rendered!");
 
 export default App;
