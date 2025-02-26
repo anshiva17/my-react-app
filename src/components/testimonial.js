@@ -1,61 +1,74 @@
-import React from "react";
+import { useState } from "react";
+import { Container, Button } from "react-bootstrap";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import testimonial1 from "../assets/img/testimonial-1.jpg";
+import testimonial2 from "../assets/img/testimonial-2.jpg";
 
-const Testimonial = () => {
+const testimonials = [
+  {
+    image: testimonial1,
+    text: "Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebam elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam.",
+    name: "Client Name",
+    profession: "Profession",
+  },
+  {
+    image: testimonial2,
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Jane Doe",
+    profession: "Designer",
+  },
+];
+
+const TestimonialCarousel = () => {
+  const [index, setIndex] = useState(0);
+
+  const handlePrev = () => {
+    setIndex((prevIndex) =>
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setIndex((prevIndex) =>
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
   return (
-    <div className="container-fluid py-5" id="testimonial">
-      <div className="container py-5">
-        <div
-          className="section-title position-relative text-center"
-          style={{ marginBottom: "120px" }}
-        >
-          <h6
-            className="text-uppercase text-primary mb-3"
-            style={{ letterSpacing: "3px" }}
-          >
-            Testimonial
-          </h6>
-          <h1 className="display-4">Our Clients Say</h1>
-        </div>
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
-            {/* Testimonial Carousel (You'll need to use a React carousel library) */}
-            <div className="owl-carousel testimonial-carousel">
-              <div className="text-center">
-                <img
-                  className="img-fluid mx-auto mb-3"
-                  src="img/testimonial-1.jpg"
-                  style={{ width: "100px" }}
-                  alt="Client 1"
-                />
-                <p style={{ fontSize: "22px" }}>
-                  Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
-                  elitr dolore et eos labore, stet justo sed est sed. Diam sed
-                  sed dolor stet amet eirmod eos labore diam
-                </p>
-                <h4>Client Name</h4>
-                <span>Profession</span>
-              </div>
-              <div className="text-center">
-                <img
-                  className="img-fluid mx-auto mb-3"
-                  src="img/testimonial-2.jpg"
-                  style={{ width: "100px" }}
-                  alt="Client 2"
-                />
-                <p style={{ fontSize: "22px" }}>
-                  Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum
-                  elitr dolore et eos labore, stet justo sed est sed. Diam sed
-                  sed dolor stet amet eirmod eos labore diam
-                </p>
-                <h4>Client Name</h4>
-                <span>Profession</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    <Container className="py-5 text-center" id="testimonials">
+      <div className="d-flex justify-content-center mb-4 gap-3">
+        <Button variant="primary" onClick={handlePrev} className="arrow-btn">
+          <FaChevronLeft size={30} />
+        </Button>
+        <Button variant="primary" onClick={handleNext} className="arrow-btn">
+          <FaChevronRight size={30} />
+        </Button>
       </div>
-    </div>
+
+      <div className="testimonial-content">
+        <img
+          src={testimonials[index].image}
+          alt={testimonials[index].name}
+          className="rounded-circle mb-4"
+          style={{ width: "100px", height: "100px", objectFit: "cover" }}
+        />
+        <p className="lead text-muted">{testimonials[index].text}</p>
+        <h5 className="fw-bold mt-3">{testimonials[index].name}</h5>
+        <p className="text-muted">{testimonials[index].profession}</p>
+      </div>
+
+      <style>{`
+        .arrow-btn {
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      `}</style>
+    </Container>
   );
 };
 
-export default Testimonial;
+export default TestimonialCarousel;

@@ -9,7 +9,10 @@ function Navbar() {
   };
 
   return (
-    <nav className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5">
+    <nav
+      className="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-1 py-lg-0 px-lg-5"
+      style={{ zIndex: 1050 }}
+    >
       <Link to="/" className="navbar-brand d-block d-lg-none">
         <h1 className="display-4 text-white text-uppercase m-0">Solar</h1>
       </Link>

@@ -1,6 +1,41 @@
-import React from "react";
+import ImageComponent from "./ImageComponent";
+import team1 from "../assets/img/team-1.jpg";
+import team2 from "../assets/img/team-2.jpg";
+import team3 from "../assets/img/team-3.jpg";
+import team4 from "../assets/img/team-4.jpg";
 
-const Team = () => {
+const teamMembers = [
+  {
+    name: "Donald John",
+    role: "CEO & Founder",
+    description:
+      "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem",
+    image: team1,
+  },
+  {
+    name: "Adam Phillips",
+    role: "Engineer",
+    description:
+      "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem",
+    image: team2,
+  },
+  {
+    name: "Thomas Olsen",
+    role: "Engineer",
+    description:
+      "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem",
+    image: team3,
+  },
+  {
+    name: "James Alien",
+    role: "Engineer",
+    description:
+      "Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem",
+    image: team4,
+  },
+];
+
+const TeamSection = () => {
   return (
     <div className="container-fluid py-5" id="team">
       <div className="container py-5">
@@ -14,188 +49,101 @@ const Team = () => {
           <h1 className="font-secondary display-4">Meet The Team</h1>
         </div>
 
-        <div className="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-          <div className="col-lg-6 p-0">
-            <div className="row m-0">
-              <div className="col-sm-6 p-0 text-center">
-                <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                  <h5 className="mb-2">Donald John</h5>
-                  <p className="text-muted font-italic mb-2">CEO & Founder</p>
-                  <p>
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem
-                  </p>
-                  <div className="position-relative mb-2">
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
+        {teamMembers.map((member, index) => (
+          <div
+            key={index}
+            className={`row ${
+              index % 2 === 0
+                ? "justify-content-lg-start"
+                : "justify-content-lg-end"
+            } m-0 mb-4 pb-2 mb-sm-0 pb-sm-0`}
+          >
+            <div className="col-lg-6 p-0">
+              <div className="row m-0">
+                {index % 2 === 0 ? (
+                  <>
+                    <div className="col-sm-6 p-0 text-center">
+                      <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                        <h5 className="mb-2">{member.name}</h5>
+                        <p className="text-muted font-italic mb-2">
+                          {member.role}
+                        </p>
+                        <p>{member.description}</p>
+                        <div className="position-relative mb-2">
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-twitter"></i>
+                          </a>
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-linkedin-in"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="col-sm-6 p-0"
+                      style={{ minHeight: "300px" }}
                     >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
+                      <ImageComponent src={member.image} alt={member.name} />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div
+                      className="col-sm-6 p-0"
+                      style={{ minHeight: "300px" }}
                     >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6 p-0" style={{ minHeight: "300px" }}>
-                <img
-                  className="position-absolute w-100 h-100"
-                  src="img/team-1.jpg"
-                  alt="Team Member 1"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-lg-end m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-          <div className="col-lg-6 p-0">
-            <div className="row m-0">
-              <div className="col-sm-6 p-0" style={{ minHeight: "300px" }}>
-                <img
-                  className="position-absolute w-100 h-100"
-                  src="img/team-2.jpg"
-                  alt="Team Member 2"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="col-sm-6 p-0 text-center">
-                <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                  <h5 className="mb-2">Adam Phillips</h5>
-                  <p className="text-muted font-italic mb-2">Engineer</p>
-                  <p>
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem
-                  </p>
-                  <div className="position-relative mb-2">
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="row justify-content-lg-start m-0 mb-4 pb-2 mb-sm-0 pb-sm-0">
-          <div className="col-lg-6 p-0">
-            <div className="row m-0">
-              <div className="col-sm-6 p-0 text-center">
-                <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                  <h5 className="mb-2">Thomas Olsen</h5>
-                  <p className="text-muted font-italic mb-2">Engineer</p>
-                  <p>
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem
-                  </p>
-                  <div className="position-relative mb-2">
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-sm-6 p-0" style={{ minHeight: "300px" }}>
-                <img
-                  className="position-absolute w-100 h-100"
-                  src="img/team-3.jpg"
-                  alt="Team Member 3"
-                  style={{ objectFit: "cover" }}
-                />
+                      <ImageComponent src={member.image} alt={member.name} />
+                    </div>
+                    <div className="col-sm-6 p-0 text-center">
+                      <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                        <h5 className="mb-2">{member.name}</h5>
+                        <p className="text-muted font-italic mb-2">
+                          {member.role}
+                        </p>
+                        <p>{member.description}</p>
+                        <div className="position-relative mb-2">
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-twitter"></i>
+                          </a>
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-facebook-f"></i>
+                          </a>
+                          <a
+                            className="btn btn-outline-primary btn-square mr-1"
+                            href="#"
+                          >
+                            <i className="fab fa-linkedin-in"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
               </div>
             </div>
           </div>
-        </div>
-
-        <div className="row justify-content-lg-end m-0">
-          <div className="col-lg-6 p-0">
-            <div className="row m-0">
-              <div className="col-sm-6 p-0" style={{ minHeight: "300px" }}>
-                <img
-                  className="position-absolute w-100 h-100"
-                  src="img/team-4.jpg"
-                  alt="Team Member 4"
-                  style={{ objectFit: "cover" }}
-                />
-              </div>
-              <div className="col-sm-6 p-0 text-center">
-                <div className="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
-                  <h5 className="mb-2">James Alien</h5>
-                  <p className="text-muted font-italic mb-2">Engineer</p>
-                  <p>
-                    Lorem elitr magna stet rebum dolores sed. Est stet labore
-                    est lorem lorem
-                  </p>
-                  <div className="position-relative mb-2">
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-twitter"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-facebook-f"></i>
-                    </a>
-                    <a
-                      className="btn btn-outline-primary btn-square mr-1"
-                      href="#"
-                    >
-                      <i className="fab fa-linkedin-in"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Team;
+export default TeamSection;

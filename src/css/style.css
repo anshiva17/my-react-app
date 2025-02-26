@@ -275,6 +275,7 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+  appearance: button; /* Standard property for compatibility */
 }
 
 button:not(:disabled),
@@ -340,6 +341,7 @@ progress {
 [type="search"] {
   outline-offset: -2px;
   -webkit-appearance: none;
+  appearance: none; /* Standard property for compatibility */
 }
 
 [type="search"]::-webkit-search-decoration {
@@ -9561,7 +9563,7 @@ h6 {
   transform: scale(1.2);
 }
 
-.product-img a,
+.product-img button,
 .gallery-item a {
   position: absolute;
   width: 60px;
@@ -9577,14 +9579,14 @@ h6 {
   opacity: 0;
 }
 
-.product-item:hover a,
+.product-item:hover button,
 .gallery-item:hover a {
   opacity: 1;
 }
 
 .bg-gallery {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("img/gallery.jpg"), no-repeat center center;
+    url("../assets/img/gallery.jpg") no-repeat center center;
   background-size: cover;
 }
 

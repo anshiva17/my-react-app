@@ -1,4 +1,6 @@
 import React from "react";
+import ImageComponent from "./ImageComponent";
+import about from "../assets/img/about.jpg";
 
 const About = () => {
   return (
@@ -6,9 +8,9 @@ const About = () => {
       <div className="container py-5">
         <div className="row align-items-center">
           <div className="col-lg-5">
-            <img
+            <ImageComponent
+              src={about}
               className="img-fluid mb-4 mb-lg-0"
-              src="img/about.jpg"
               alt="About Us"
             />
           </div>

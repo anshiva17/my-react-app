@@ -28,7 +28,7 @@ const SolarEnergyModal = () => {
         <Modal.Body>
           <img
             className="img-fluid mb-4"
-            src="img/carousel-1.jpg"
+            src="../assets/img/carousel-1.jpg"
             alt="Solar Energy System"
           />
           <p>
