@@ -1,17 +1,13 @@
 import React from "react";
+import Heading from "./heading";
 
 const FAQs = () => {
   return (
     <div className="container-fluid py-5" id="faqs">
       <div className="container py-5">
         <div className="section-title position-relative text-center">
-          <h6
-            className="text-uppercase text-primary mb-3"
-            style={{ letterSpacing: "3px" }}
-          >
-            FAQs
-          </h6>
-          <h1 className="display-4">You Should Know</h1>
+          <Heading text="Faqs" />
+          <Heading className="display-4" text="Faqs" level={1} />
         </div>
 
         <div className="row">

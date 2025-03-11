@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Modal } from "react-bootstrap";
+import Heading from "./heading";
 import product1 from "../assets/img/product-1.jpg";
 import product2 from "../assets/img/product-2.jpg";
 import product3 from "../assets/img/product-3.jpg";
@@ -69,7 +70,7 @@ const ProductItem = () => {
                 </Button>
               </div>
               <div className="bg-secondary text-center p-4">
-                <h3 className="m-0">{product.title}</h3>
+                <Heading text={product.title} level={3} className="m-0" />
               </div>
             </div>
           </div>
