@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { Container, Button, Modal } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
+import Heading from "./heading";
+import ReusableModal from "./ReusableModal";
 
 import gallery1 from "../assets/img/gallery-1.jpg";
 import gallery2 from "../assets/img/gallery-2.jpg";
@@ -39,15 +41,12 @@ const GalleryCarousel = () => {
   return (
     <Container fluid className="bg-gallery py-5" id="project">
       <div className="section-title text-center mb-5">
-        <h6
-          className="text-uppercase text-primary mb-3"
-          style={{ letterSpacing: "3px" }}
-        >
-          Project
-        </h6>
-        <h1 className="font-secondary display-4 text-white">
-          Project Photo Gallery
-        </h1>
+        <Heading text="Project" />
+        <Heading
+          text="Project Photo Gallery"
+          level={1}
+          className="font-secondary display-4 text-white"
+        />
       </div>
 
       <div className="d-flex justify-content-center mb-4 gap-3">
@@ -118,16 +117,12 @@ const GalleryCarousel = () => {
         }
       `}</style>
 
-      <Modal
+      <ReusableModal
         show={showLightbox}
-        onHide={() => setShowLightbox(false)}
-        centered
-        size="lg"
+        handleClose={() => setShowLightbox(false)}
       >
-        <Modal.Body className="text-center">
-          <img src={activeImage} alt="Lightbox" className="img-fluid" />
-        </Modal.Body>
-      </Modal>
+        <img src={activeImage} alt="Lightbox" className="img-fluid" />
+      </ReusableModal>
     </Container>
   );
 };

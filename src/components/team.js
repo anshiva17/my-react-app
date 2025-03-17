@@ -1,4 +1,5 @@
 import ImageComponent from "./ImageComponent";
+import Heading from "./heading";
 import team1 from "../assets/img/team-1.jpg";
 import team2 from "../assets/img/team-2.jpg";
 import team3 from "../assets/img/team-3.jpg";
@@ -40,13 +41,13 @@ const TeamSection = () => {
     <div className="container-fluid py-5" id="team">
       <div className="container py-5">
         <div className="section-title position-relative text-center">
-          <h6
-            className="text-uppercase text-primary mb-3"
-            style={{ letterSpacing: "3px" }}
-          >
-            Team
-          </h6>
-          <h1 className="font-secondary display-4">Meet The Team</h1>
+          <Heading text="Team" />
+
+          <Heading
+            className="font-secondary display-4"
+            text="Meet The Team"
+            level={1} // You can specify any heading level (h1 to h6)
+          />
         </div>
 
         {teamMembers.map((member, index) => (

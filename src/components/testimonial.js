@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Heading from "./heading";
 import { Container, Button } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import testimonial1 from "../assets/img/testimonial-1.jpg";
@@ -41,13 +42,9 @@ const TestimonialCarousel = () => {
           className="section-title position-relative text-center"
           style={{ marginBottom: "40px" }}
         >
-          <h6
-            className="text-uppercase text-primary mb-3"
-            style={{ letterSpacing: "3px" }}
-          >
-            Testimonial
-          </h6>
-          <h1 className="display-4">Our Clients Say</h1>
+          <Heading text="Testimonial" />
+
+          <Heading className="display-4" text="Our Clients Say" level={1} />
         </div>
 
         <div className="d-flex justify-content-center mb-5 gap-3">

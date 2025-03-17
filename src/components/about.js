@@ -1,5 +1,6 @@
 import React from "react";
 import ImageComponent from "./ImageComponent";
+import Heading from "./heading";
 import about from "../assets/img/about.jpg";
 
 const About = () => {
@@ -15,12 +16,8 @@ const About = () => {
             />
           </div>
           <div className="col-lg-7">
-            <h6
-              className="text-uppercase text-primary mb-3"
-              style={{ letterSpacing: "3px" }}
-            >
-              About Us
-            </h6>
+            <Heading text="About Us" />
+
             <h1 className="display-4 mb-3">
               <span className="text-primary">25+ Years Experience</span> In
               Solar Power Industry
