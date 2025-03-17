@@ -120,7 +120,6 @@ const GalleryCarousel = () => {
       <ReusableModal
         show={showLightbox}
         handleClose={() => setShowLightbox(false)}
-        title="Image Preview"
       >
         <img src={activeImage} alt="Lightbox" className="img-fluid" />
       </ReusableModal>
