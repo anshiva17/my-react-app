@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Container, Button, Modal } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
 import Heading from "./heading";
+import ReusableModal from "./ReusableModal";
 
 import gallery1 from "../assets/img/gallery-1.jpg";
 import gallery2 from "../assets/img/gallery-2.jpg";
@@ -116,16 +117,13 @@ const GalleryCarousel = () => {
         }
       `}</style>
 
-      <Modal
+      <ReusableModal
         show={showLightbox}
-        onHide={() => setShowLightbox(false)}
-        centered
-        size="lg"
+        handleClose={() => setShowLightbox(false)}
+        title="Image Preview"
       >
-        <Modal.Body className="text-center">
-          <img src={activeImage} alt="Lightbox" className="img-fluid" />
-        </Modal.Body>
-      </Modal>
+        <img src={activeImage} alt="Lightbox" className="img-fluid" />
+      </ReusableModal>
     </Container>
   );
 };

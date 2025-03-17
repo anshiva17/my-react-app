@@ -1,29 +1,26 @@
 import { useState } from "react";
-import { Container, Button, Modal } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import Heading from "./heading";
-import product1 from "../assets/img/product-1.jpg";
-import product2 from "../assets/img/product-2.jpg";
-import product3 from "../assets/img/product-3.jpg";
-import carousel1 from "../assets/img/carousel-1.jpg";
+import ReusableModal from "./ReusableModal";
 
 const products = [
   {
     id: 1,
-    imgSrc: product1,
+    imgSrc: require("../assets/img/product-1.jpg"),
     title: "Solar System",
     description:
-      "Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor gubergren dolor dolor dolor.",
+      "Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea dolores ut nonumy, sea est rebum dolore dolor.",
   },
   {
     id: 2,
-    imgSrc: product2,
+    imgSrc: require("../assets/img/product-2.jpg"),
     title: "Wind Turbine",
     description:
       "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.",
   },
   {
     id: 3,
-    imgSrc: product3,
+    imgSrc: require("../assets/img/product-3.jpg"),
     title: "Wind Generator",
     description:
       "Justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
@@ -78,61 +75,18 @@ const ProductItem = () => {
       </div>
 
       {activeProduct && (
-        <Modal show={showModal} onHide={closeModal} centered size="lg">
-          <Modal.Header closeButton>
-            <Modal.Title>Solar Energy System</Modal.Title>
-          </Modal.Header>
-          <Modal.Body className="p-4">
-            <img
-              src={carousel1}
-              alt="Solar Energy System"
-              className="img-fluid mb-4"
-            />
-
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-            <p>
-              Sit eos diam rebum amet stet sit lorem invidunt, kasd dolor ea
-              dolores ut nonumy, sea est rebum dolore dolor. Lorem tempor tempor
-              gubergren dolor dolor dolor. Kasd amet labore voluptua justo diam,
-              dolore accusam duo est stet nonumy tempor dolores sadipscing duo.
-              Stet at et nonumy erat et sed.
-            </p>
-          </Modal.Body>
-        </Modal>
+        <ReusableModal
+          show={showModal}
+          handleClose={closeModal}
+          title={activeProduct.title}
+        >
+          <img
+            src={activeProduct.imgSrc}
+            alt={activeProduct.title}
+            className="img-fluid mb-4"
+          />
+          <p>{activeProduct.description}</p>
+        </ReusableModal>
       )}
 
       <style>{`
