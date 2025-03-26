@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/my-react-app/static/css/main.f1fbde6e.css",
-    "main.js": "/my-react-app/static/js/main.3917e2af.js",
+    "main.css": "/my-react-app/static/css/main.83f7f7b0.css",
+    "main.js": "/my-react-app/static/js/main.a754c418.js",
     "static/js/151.c08d8a08.chunk.js": "/my-react-app/static/js/151.c08d8a08.chunk.js",
     "static/media/carousel-2.jpg": "/my-react-app/static/media/carousel-2.916a4045d5702144a54b.jpg",
     "static/media/carousel-1.jpg": "/my-react-app/static/media/carousel-1.441701f82fb287b58c70.jpg",
@@ -21,12 +21,12 @@
     "static/media/team-1.jpg": "/my-react-app/static/media/team-1.acb3b5d5060c5b419581.jpg",
     "static/media/team-3.jpg": "/my-react-app/static/media/team-3.e2627e741d64f54390bd.jpg",
     "index.html": "/my-react-app/index.html",
-    "main.f1fbde6e.css.map": "/my-react-app/static/css/main.f1fbde6e.css.map",
-    "main.3917e2af.js.map": "/my-react-app/static/js/main.3917e2af.js.map",
+    "main.83f7f7b0.css.map": "/my-react-app/static/css/main.83f7f7b0.css.map",
+    "main.a754c418.js.map": "/my-react-app/static/js/main.a754c418.js.map",
     "151.c08d8a08.chunk.js.map": "/my-react-app/static/js/151.c08d8a08.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f1fbde6e.css",
-    "static/js/main.3917e2af.js"
+    "static/css/main.83f7f7b0.css",
+    "static/js/main.a754c418.js"
   ]
 }
