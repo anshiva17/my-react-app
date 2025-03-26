@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   // State to manage the newsletter email input
@@ -127,9 +128,10 @@ const Footer = () => {
                   <a className="text-white btn-scroll mb-2" href="#service">
                     <i className="fa fa-angle-right mr-2"></i>Solar Energy
                   </a>
-                  <a className="text-white btn-scroll" href="#service">
-                    <i className="fa fa-angle-right mr-2"></i>Solar Panel
-                  </a>
+
+                  <Link to="/HotCountries" className="text-white btn-scroll">
+                    <i className="fa fa-angle-right mr-2"></i> Hot Countries
+                  </Link>
                 </div>
               </div>
             </div>
