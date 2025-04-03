@@ -33,6 +33,11 @@ const HotCountries = () => {
     "Russia",
     "Nigeria",
     "Japan",
+
+    "Russia",
+    "Nigeria",
+    "Japan",
+
     "Egypt",
     "Colombia",
     "Peru",
