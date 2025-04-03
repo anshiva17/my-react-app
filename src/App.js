@@ -34,7 +34,7 @@ function App() {
 
         {/* Define your Routes */}
         <Routes>
-          <Route path="/HotCountries" element={<HotCountries />} />
+          <Route path="/hot-countries" element={<HotCountries />} />
         </Routes>
 
         <Footer />

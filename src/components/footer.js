@@ -129,7 +129,7 @@ const Footer = () => {
                     <i className="fa fa-angle-right mr-2"></i>Solar Energy
                   </a>
 
-                  <Link to="/HotCountries" className="text-white btn-scroll">
+                  <Link to="/hot-countries" className="text-white btn-scroll">
                     <i className="fa fa-angle-right mr-2"></i> Hot Countries
                   </Link>
                 </div>
