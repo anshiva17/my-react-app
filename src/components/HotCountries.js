@@ -29,15 +29,9 @@ const HotCountries = () => {
     "Turkey",
     "Malaysia",
     "Chile",
-
     "Russia",
     "Nigeria",
     "Japan",
-
-    "Russia",
-    "Nigeria",
-    "Japan",
-
     "Egypt",
     "Colombia",
     "Peru",
