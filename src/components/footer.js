@@ -130,7 +130,7 @@ const Footer = () => {
                   </a>
 
                   <Link to="/hot-countries" className="text-white btn-scroll">
-                    <i className="fa fa-angle-right mr-2"></i> Hot Countries
+                    <i className="fa fa-angle-right mr-2"></i>Hot Countries
                   </Link>
                 </div>
               </div>
