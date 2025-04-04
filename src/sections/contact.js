@@ -19,11 +19,7 @@ const GoogleForm = () => {
             <div className="contact-form">
               <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSffhTKcd5SCz0u5dRAUPIn7nOHy2mmQDbDv4_E9Y4cEVqc99w/viewform?embedded=true"
-                width="640"
-                height="821"
-                frameBorder="0"
-                marginHeight="0"
-                marginWidth="0"
+                style={{ width: "100%", height: "100%", border: "none" }}
                 title="Google Form"
               >
                 Loading…
