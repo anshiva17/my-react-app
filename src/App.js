@@ -9,7 +9,7 @@ import Team from "./sections/team";
 import Faqs from "./sections/faqs";
 import Testimonial from "./sections/testimonial";
 import Contact from "./sections/contact";
-import HotCountries from "./components/HotCountries"; // Import HotCountries component
+import HotCountries from "./components/hot-countries"; // Import HotCountries component
 import Footer from "./components/footer";
 
 import "./App.css";
