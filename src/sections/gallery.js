@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Container, Button } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight, FaPlus } from "react-icons/fa";
-import Heading from "./heading";
-import ReusableModal from "./ReusableModal";
+import Heading from "../components/heading";
+import ReusableModal from "../components/ReusableModal";
 
 import gallery1 from "../assets/img/gallery-1.jpg";
 import gallery2 from "../assets/img/gallery-2.jpg";

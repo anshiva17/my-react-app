@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Importing BrowserRouter and Routes
 import Navbar from "./components/Navbar/navbar";
-import Carousel from "./components/carousel";
-import About from "./components/about";
-import Services from "./components/services";
-import GalleryCarousel from "./components/gallery";
-import Team from "./components/team";
-import Faqs from "./components/faqs";
-import Testimonial from "./components/testimonial";
-import Contact from "./components/contact";
+import Carousel from "./sections/carousel";
+import About from "./sections/about";
+import Services from "./sections/services";
+import GalleryCarousel from "./sections/gallery";
+import Team from "./sections/team";
+import Faqs from "./sections/faqs";
+import Testimonial from "./sections/testimonial";
+import Contact from "./sections/contact";
 import HotCountries from "./components/HotCountries"; // Import HotCountries component
 import Footer from "./components/footer";
 

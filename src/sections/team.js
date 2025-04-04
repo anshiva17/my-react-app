@@ -1,5 +1,5 @@
-import ImageComponent from "./ImageComponent";
-import Heading from "./heading";
+import ImageComponent from "../components/ImageComponent";
+import Heading from "../components/heading";
 import team1 from "../assets/img/team-1.jpg";
 import team2 from "../assets/img/team-2.jpg";
 import team3 from "../assets/img/team-3.jpg";

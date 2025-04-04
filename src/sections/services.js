@@ -1,6 +1,6 @@
 import React from "react";
-import Heading from "./heading";
-import ProductItem from "./ProductItem";
+import Heading from "../components/heading";
+import ProductItem from "../components/ProductItem";
 
 const Services = () => {
   return (

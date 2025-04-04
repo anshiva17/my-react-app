@@ -1,6 +1,6 @@
 import React from "react";
-import ImageComponent from "./ImageComponent";
-import Heading from "./heading";
+import ImageComponent from "../components/ImageComponent";
+import Heading from "../components/heading";
 import about from "../assets/img/about.jpg";
 
 const About = () => {

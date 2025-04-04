@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Heading from "./heading";
+import Heading from "../components/heading";
 import { Container, Button } from "react-bootstrap";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import testimonial1 from "../assets/img/testimonial-1.jpg";
